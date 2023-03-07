@@ -17,10 +17,10 @@ func GenerateBoard() []string {
         rand.Seed(time.Now().UnixNano())
                 var str string
                 for j := 0 ; j < SIZE - 1 ; j++ {
-                        r := int64(rand.Intn(SIZE))
+                        r := int64(rand.Intn(SIZE-1)+1)
                         str += strconv.FormatInt(r, 10) + " "
                 }
-                r := int64(rand.Intn(SIZE))
+                r := int64(rand.Intn(SIZE-1)+1)
                 str += strconv.FormatInt(r, 10)
                 s = append(s, str)
         }
